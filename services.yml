@@ -1,0 +1,5 @@
+website:
+    - 'cd ~/zytekaron.com'
+    - 'git pull'
+    - 'npm install'
+    - 'pm2 restart zytekaron.com'
