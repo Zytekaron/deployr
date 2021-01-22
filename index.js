@@ -55,6 +55,10 @@ app.get('/:name/deploy', async (req, res) => {
     });
 });
 
+app.use((req, res) => {
+    res.status(404).send({ success: false, error: 'not found' });
+});
+
 function exec(commands) {
     return new Promise(resolve => {
         const buf = [];
