@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/restart/:name', async (req, res) => {
+app.get('/:name/deploy', async (req, res) => {
     const { name } = req.params;
     const commands = services.get(name);
     if (!commands) {
