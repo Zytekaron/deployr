@@ -5,7 +5,13 @@ const childProcess = require('child_process');
 const express = require('express');
 const YAML = require('yaml');
 
+const auth = process.env.ZYTEKARON_AUTH;
 const port = process.env.PORT || 8080;
+
+if (!auth) {
+    // todo apply to notifications/logger
+    throw new Error('No environment variable for authentication');
+}
 
 const app = express();
 const services = new Map();
@@ -21,7 +27,7 @@ app.use((req, res, next) => {
     if (!authorization) {
         return res.status(403).send({ success: false, error: 'forbidden' });
     }
-    if (authorization !== process.env.AUTH) {
+    if (authorization !== auth) {
         return res.status(401).send({ success: false, error: 'unauthorized' });
     }
     next();
