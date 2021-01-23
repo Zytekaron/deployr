@@ -4,12 +4,18 @@ website:
     - 'npm install'
     - 'pm2 restart zytekaron.com'
 
+files:
+    - 'cd ~/services/fileman'
+    - 'git pull'
+    - 'go get'
+    - 'go build main.go -o fileman'
+    - 'sudo systemctl restart fileman'
+
 logbyte:
     - 'cd ~/services/logbyte'
     - 'git pull'
     - 'go get'
     - 'go build main.go -o logbyte'
-    - 'sudo mv logbyte /usr/bin'
     - 'sudo systemctl restart logbyte'
 
 cron:
@@ -17,7 +23,6 @@ cron:
     - 'git pull'
     - 'go get'
     - 'go build main.go -o cron'
-    - 'sudo mv cron /usr/bin'
     - 'sudo systemctl restart cron'
 
 notifs:
@@ -25,5 +30,4 @@ notifs:
     - 'git pull'
     - 'go get'
     - 'go build main.go -o notifs'
-    - 'sudo mv notifs /usr/bin'
     - 'sudo systemctl restart notifs'
