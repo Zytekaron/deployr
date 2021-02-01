@@ -2,7 +2,7 @@ website:
   - 'cd ~/zytekaron.com'
   - 'git pull'
   - 'npm install'
-  - 'sudo systemctl restart website'
+  - 'website restart'
 
 files:
   - 'cd ~/services/fileman'
@@ -10,7 +10,7 @@ files:
   - 'go get'
   - 'go build main.go'
   - 'mv main fileman'
-  - 'sudo systemctl restart fileman'
+  - 'fileman restart'
 
 logbyte:
   - 'cd ~/services/logbyte'
@@ -18,7 +18,7 @@ logbyte:
   - 'go get'
   - 'go build main.go'
   - 'mv main logbyte'
-  - 'sudo systemctl restart logbyte'
+  - 'logbyte restart'
 
 cron:
   - 'cd ~/services/cron'
@@ -26,7 +26,7 @@ cron:
   - 'go get'
   - 'go build main.go'
   - 'mv main cron'
-  - 'sudo systemctl restart cron'
+  - 'cron restart'
 
 notifs:
   - 'cd ~/services/notifs'
@@ -34,4 +34,4 @@ notifs:
   - 'go get'
   - 'go build main.go'
   - 'mv main notifs'
-  - 'sudo systemctl restart notifs'
+  - 'notifs restart'
