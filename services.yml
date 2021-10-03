@@ -1,51 +1,47 @@
 website:
-  - 'cd /home/zytekaron/zytekaron.com'
+  - 'cd /home/z/zytekaron.com'
   - 'git pull'
   - 'npm install'
   - 'sudo website restart'
 
 files:
-  - 'cd /home/zytekaron/services/fileman'
+  - 'cd /home/z/services/fileman'
   - 'git pull'
   - 'go get'
-  - 'go build main.go'
-  - 'mv main fileman'
+  - 'go build -o fileman main.go'
   - 'sudo fileman restart'
 
 logbyte:
-  - 'cd /home/zytekaron/services/logbyte'
+  - 'cd /home/z/services/logbyte'
   - 'git pull'
   - 'go get'
-  - 'go build main.go'
-  - 'mv main logbyte'
+  - 'go build -o logbyte main.go'
   - 'sudo logbyte restart'
 
-cron:
-  - 'cd /home/zytekaron/services/cron'
+cronman:
+  - 'cd /home/z/services/cron'
   - 'git pull'
   - 'go get'
-  - 'go build main.go'
-  - 'mv main cron'
-  - 'sudo cron restart'
+  - 'go build -o cronman main.go'
+  - 'sudo cronman restart'
 
-notifs:
-  - 'cd /home/zytekaron/services/notifs'
+notifyr:
+  - 'cd /home/z/services/notifs'
   - 'git pull'
   - 'go get'
-  - 'go build main.go'
-  - 'mv main notifs'
-  - 'sudo notifs restart'
+  - 'go build -o notifyr main.go'
+  - 'sudo notifyr restart'
 
 executr:
-  - 'cd /home/zytekaron/services/executr'
+  - 'cd /home/z/services/executr'
   - 'git pull'
   - 'npm install'
   - 'sudo executr restart'
 
 cronman:
-  - 'cd /home/zytekaron/services/cronman'
+  - 'cd /home/z/services/cronman'
   - 'git pull'
   - 'go get'
-  - 'go build main.go'
-  - 'mv main cronman'
+  - 'go build -o cronman main.go'
   - 'sudo cronman restart'
+
